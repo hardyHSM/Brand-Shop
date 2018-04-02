@@ -1,0 +1,34 @@
+
+html {
+	font-size: $baseFontSize;
+	@media screen and (max-width: $small-desktop-w) {
+		font-size: 14px;
+	}
+}
+body {
+	font-family: $main-font;
+	line-height: 1.2;
+	color: $dark-color;
+	font-size: $baseFontSize;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+	padding: 0;
+}

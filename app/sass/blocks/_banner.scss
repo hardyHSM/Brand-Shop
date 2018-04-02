@@ -1,0 +1,184 @@
+.page__main-banner {
+  height: 620px;
+  width: 100%;
+  background: #fff url('../img/banner-picture/banner-man.jpg') no-repeat;
+  background-size: cover;
+  background-position: 100% 30%;
+  @media screen and (max-width: $port-tablets-min-w) {
+    background: #fff url('../img/banner-picture/banner-man-min.jpg') no-repeat;
+  }
+}
+
+.banner__title {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+
+  padding-left: 25px;
+  font-family: $main-font_black;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-size: rem(52);
+  &_light {
+    color: $white-color;
+  }
+  @media screen and (max-width: $big-mobile-w) {
+   font-size: 3.1875rem;
+  }
+}
+
+.banner__title_has-line {
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: 10px;
+    width: 12px;
+    height: 81%;
+    background-color: $accent-color;
+  }
+}
+.banner__title-big {
+  font-size: rem(75);
+  @media screen and (max-width: $big-mobile-w) {
+    font-size: rem(45);
+  }
+}
+
+.banner__title-accent {
+  color: $accent-color;
+}
+.banner_advantages {
+  margin-bottom: 90px;
+  .banner__content {
+    position: relative;
+    min-width: 765px;
+    height: 530px;
+    background: #fff url('../img/banner-picture/banner-woman.jpg') no-repeat center center / cover;
+    @media screen and (max-width: $desktop-w) {
+      min-width: 565px;
+    }
+    @media screen and (max-width: $small-desktop-w) {
+      min-width: 465px;
+    }
+    @media screen and (max-width: $port-tablets-w) {
+      min-width: 100%;
+    }
+  }
+}
+.advantages {
+  background-color: $dark-color;
+}
+
+.advantages_column {
+  padding: 45px 40px;
+  .advantages__item {
+    width: 100%;
+    @media screen and (max-width: $port-tablets-w) {
+      margin-bottom: 25px;
+    }
+  }
+  .advantages__list {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.banner__advantages {
+  flex-grow: 1;
+}
+.banner__wrapper {
+  @include flex($jc: sb, $wrap: nowrap);
+  @media screen and (max-width: $port-tablets-w) {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+
+.advantages__item-content {
+  padding-left: 70px;
+  color: $white-color;
+  position: relative;
+}
+.advantages__icon {
+  position: absolute;
+  fill: $accent-color;
+  left: 0px;
+  top: 0px;
+}
+
+.advantages__title {
+  display: block;
+  font-size: rem(20);
+}
+.advantages__title {
+  font-family: $main-font_bold;
+}
+.advantages__desc {
+  font-size: rem(14);
+  font-family: $main-font_light;
+  @media screen and (max-width: $port-tablets-w) {
+    font-size: rem(16);
+  }
+}
+
+.advantages__list {
+  height: 100%;
+  @include flex();
+}
+.advantages__icon_delivery {
+    width: 50px;
+    height: 35px;
+}
+.advantages__icon_sales {
+  width: 40px;
+  height: 40px;
+}
+.advantages__icon_king {
+  width: 56px;
+  height: 41px;
+}
+// МОДИФИКАЦИЯ ROW
+.advantages_row {
+  width: 100%;
+  .advantages__list {
+    padding: 90px 0px;
+    @include flex($jc: sa);
+  }
+  .advantages__icon {
+    position: static;
+    transform: translate(0,0);
+    margin: 0px auto 30px;
+    display: block;
+    @media screen and (max-width: $port-tablets-min-w) {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+
+  .advantages__item {
+    width: 31%;
+    text-align: center;
+    @media screen and (max-width: $port-tablets-w) {
+      width: 45%;
+    }
+    @media screen and (max-width: $port-tablets-min-w) {
+      width: 100%;
+      margin-bottom: 25px;
+    }
+  }
+  .advantages__item-content {
+    padding: 0px;
+    @media screen and (max-width: $port-tablets-min-w) {
+      padding-left: 100px;
+      text-align: left;
+    }
+  }
+}
+
+

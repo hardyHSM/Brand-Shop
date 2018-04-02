@@ -1,0 +1,53 @@
+// Подключение шрифтов
+@import 'fonts';
+
+
+// подключение переменных, миксин и базовые настройки
+@import 'mixin';
+@import 'vars';
+@import 'base';
+
+// подключение библиотек
+@import '../libs/normalize';
+@import '../libs/slick-1.8.0/slick';
+@import '../libs/slick-1.8.0/slick-theme';
+
+
+.container {
+	width: 100%;
+	max-width: $desktop-w;
+	box-sizing: border-box;
+	padding-left: 15px;
+	padding-right: 15px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100%;
+	@media screen and (max-width: $desktop-w) {
+		max-width: $small-desktop-w;
+	}
+	@media screen and (max-width: $small-desktop-w) {
+		max-width: $port-tablets-w;
+		padding: 0px 5px;
+	}
+	@media screen and (max-width: $port-tablets-w) {
+		max-width: $port-tablets-min-w;
+	}
+	@media screen and (max-width: $port-tablets-min-w) {
+		max-width: $big-mobile-w;
+	}
+	@media screen and (max-width: $big-mobile-w) {
+		max-width: $small-mobile-w;
+	}
+}
+
+.page__wrapper {
+	position: relative;
+	overflow: hidden;
+}
+
+// modules include
+
+@import '/blocks/**/*';
+
+//@import 'media';

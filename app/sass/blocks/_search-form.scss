@@ -1,0 +1,78 @@
+.search {
+  font-family: $main-font_light;
+  @include flex($wrap: nowrap);
+  font-size: rem(16);
+  input:hover,
+  input:focus,
+  button:focus,
+  button:hover {
+    border: 1px solid $grey-color;
+    outline: none;
+  }
+  @media screen and (max-width: $big-mobile-w) {
+    justify-content: center;
+  }
+}
+.search__input {
+  display: block;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  width: 280px;
+  padding: 13px 15px;
+  box-sizing: border-box;
+  border-top: 1px solid $grey-color-light;
+  border-bottom: 1px solid $grey-color-light;
+  @include placeholder{
+    color: $input-placeholder-color;
+  }
+  @media screen and (max-width: $small-desktop-w) {
+    width: 160px;
+  }
+  @media screen and (max-width: $port-tablets-w) {
+    width: auto;
+    flex-grow: 1;
+  }
+  @media screen and (max-width: $big-mobile-w) {
+    width: 40%;
+    flex-grow: 0;
+  }
+}
+.search__select {
+  display: block;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.search__icon {
+  width: 17px;
+  height: 16px;
+  position: absolute;
+  fill: $input-placeholder-color;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  margin: auto;
+}
+.search__button-search {
+  position: relative;
+  min-width: 50px;
+  display: block;
+  border: 1px solid $grey-color-light;
+  border-radius: 0px 5px 5px 0px;
+}
+
+
+.search__drop-down {
+  transform: translateY(25px);
+  position: absolute;
+  left: 0px;
+  top: 90%;
+}
+
+.search__drop-down_active {
+  visibility: visible;
+  transition: all .3s;
+  opacity: 1;
+  transform: translateY(0px);
+}

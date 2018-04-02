@@ -1,0 +1,52 @@
+.main-header {
+  border-bottom: 1px solid $grey-color;
+}
+
+.main-header__logo {
+  margin-right: 37px;
+  display: inline-block;
+  @media screen and (max-width: $port-tablets-w) {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 25px;
+  }
+}
+
+.main-header__search {
+  display: inline-block;
+  @media screen and (max-width: $port-tablets-w) {
+    display: block;
+    margin-bottom: 25px;
+  }
+}
+
+.main-header__left {
+  @media screen and (max-width: $port-tablets-w) {
+    text-align: center;
+  }
+}
+
+
+.main-header__content {
+  @include flex($jc: sb, $ai: c);
+  padding: 30px 0px;
+  @media screen and (max-width: $port-tablets-w) {
+    display: block;
+  }
+}
+.main-header__button-menu {
+  display: none;
+  top: 40px;
+  left: 10px;
+  @media screen and (max-width: $port-tablets-w) {
+    display: block;
+    position: absolute;
+    z-index: 101;
+  }
+  &.button-menu_active {
+    position: fixed;
+    top: 40px;
+    left: 10px;
+  }
+}
+

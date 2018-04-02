@@ -1,0 +1,23 @@
+.product-section__inner {
+  padding: 55px 0px 105px;
+  @include flex($jc: sb, $wrap: nowrap);
+}
+.product-content {
+  flex-grow: 1;
+}
+.sideBar {
+  width: 250px;
+  flex-shrink: 0;
+  margin-right: 45px;
+  @media screen and (max-width: $small-desktop-w) {
+    width: 230px;
+  }
+  @media screen and (max-width: $port-tablets-w) {
+    display: none;
+  }
+}
+.product-section__pagination {
+  @media screen and (max-width: $big-mobile-w) {
+    margin-bottom: 40px;
+  }
+}

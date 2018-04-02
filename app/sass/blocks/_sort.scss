@@ -1,0 +1,85 @@
+.sort-panel {
+  padding: 10px;
+  background-color: $color-sort-pane;
+  color: $grey-text-color;
+  font-family: $main-font;
+  font-size: rem(14);
+  @include flex($jc: sb);
+}
+.sort-panel__left {
+  @include flex()
+}
+.sort-panel__left {
+  @include flex()
+}
+.sort-select {
+  font-size: 0px;
+  * {
+    font-size: rem(14)
+  }
+}
+.sort-select__title {
+  display: inline-block;
+  border: 1px solid $grey-color-light;
+  border-right: 0px;
+  padding: 10px;
+  background-color: $white-color;
+}
+.sort-select__body {
+  background-color: $white-color;
+  display: inline-block;
+  border: 1px solid $grey-color-light;
+  padding: 10px 38px 10px 10px;
+  color: $grey-text-color;
+  font-family: $main-font;
+  font-size: rem(14);
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 55%;
+    right: 8px;
+    transform: translateY(-50%);
+    opacity: 0.6;
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-top: 7px solid $dark-color;
+  }
+}
+
+
+.sort-panel__select {
+  margin-right: 3px;
+}
+.sort-display__item {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  position: relative;
+  margin-right: 7px;
+  background-color: $white-color;
+  cursor: pointer;
+}
+.sort-display__icon {
+  fill: $grey-icon-color;
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+.sort-display__item_active {
+  background-color: $accent-color;
+  .sort-display__icon {
+    fill: $white-color;
+  }
+}
+.sort-display {
+    @media screen and (max-width: $port-tablets-w) {
+      display: none;
+     }
+}

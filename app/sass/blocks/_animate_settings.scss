@@ -1,0 +1,77 @@
+@mixin animate($sec) {
+    animation-duration: $sec;
+    animation-fill-mode: both;
+}
+
+.reviews-slide__cite {
+  transition: all .5s linear;
+  transition-delay: .1s;
+  opacity: 0;
+  transform: translateX(45px);
+}
+
+.reviews-slide__img-author {
+  opacity: 0;
+  transform: translateX(35px);
+  transition: all .5s linear;
+  transition-delay: .1s;
+  opacity: 0;
+}
+
+.slick-current {
+  .reviews-slide__cite, .reviews-slide__img-author {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.banner__title {
+  @include animate(2s);
+  animation-name: fadeInUp;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+.product-card_hidden {
+  visibility: hidden;
+}
+
+.featured-products {
+  overflow: hidden;
+  .product-card_animated {
+    visibility: visible;
+    @include animate(2s);
+    animation-name: stay;
+    animation-timing-function: cubic-bezier(.11,1,0,1);
+    @for $i from 0 to 9 {
+      $delay: 0.2;
+      &:nth-child(#{$i}) {
+          animation-delay: #{$delay * ($i * 0.3)}s;
+        }
+      }
+    @media screen and (max-width: $port-tablets-min-w) {
+      animation-name: none;
+    }
+  }
+}
+
+@keyframes stay {
+  from {
+    opacity: 0;
+    transform: translateX(-500px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}

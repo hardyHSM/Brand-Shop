@@ -1,0 +1,132 @@
+.main-footer {
+  background-color: #fff;
+  color: $grey-color-footer;
+}
+.main-footer__top {
+  padding: 110px 0px 85px;
+  @include flex($jc: sb);
+}
+.main-footer__description {
+  width: 37.1%;
+  @media screen and (max-width: $port-tablets-w) {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+}
+.main-footer__logo {
+  margin-bottom: 30px;
+}
+
+.main-footer__text {
+  font-family: $main-font_light;
+  line-height: 1.3;
+  p {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.main-footer__title {
+  margin-bottom: 40px;
+  font-size: rem(18);
+  font-family: $main-font;
+  color: $accent-color;
+  text-transform: uppercase;
+  @media screen and (max-width: $big-mobile-w) {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: -20px;
+      transform: translateY(-50%) rotate(-45deg);
+      width: 7px;
+      height: 7px;
+      border-bottom: 1px solid $dark-color;
+      border-left: 1px solid $dark-color;
+    }
+  }
+}
+.main-footer__link {
+  font-family: $main-font;
+  font-size: rem(16);
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.main-footer__item {
+  margin-bottom: 26px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.main-footer__bottom {
+  background-color: $grey-color-light;
+}
+.main-footer__bottom-content {
+  @include flex($jc: sb, $ai: c);
+  padding: 24px 0px;
+}
+.copyright {
+  display: block;
+  font-size: rem(16);
+  font-family: $main-font;
+}
+
+.main-footer__copyright {
+  @media screen and (max-width: $big-mobile-w) {
+    margin-bottom: 25px;
+  }
+}
+
+/* SOCIALS */
+.socials__list {
+  @include flex();
+}
+.socials__item {
+  margin-right: 8px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.socials__link {
+  position: relative;
+  transition: all .3s ease;
+  display: block;
+  width: 35px;
+  height: 35px;
+  background-color: #fff;
+  text-align: center;
+  &:hover {
+    background-color: $accent-color;
+    .socials__icon {
+      fill: $white-color;
+    }
+  }
+}
+.socials__icon {
+  display: inline-block;
+  line-height: 30;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  fill: $dark-text-color;
+}
+.main-footer__company-list, .main-footer__information-block, .main-footer__shop-category {
+  @media screen and (max-width: $big-mobile-w) {
+    width: 100%;
+  }
+}
+.main-footer__list {
+  @media screen and (max-width: $big-mobile-w) {
+    margin-bottom: 25px;
+    display: none;
+  }
+}

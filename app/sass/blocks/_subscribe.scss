@@ -1,0 +1,87 @@
+.subscribe {
+   background: #fff url('../img/reviews/reviews-bg.jpg') no-repeat center center / cover;
+}
+
+.subscribe__left, .subscribe__right {
+  width: 50%;
+}
+.subscribe__inner {
+  @include flex($jc: sb, $wrap: nowrap);
+  @media screen and (max-width: $port-tablets-w) {
+    flex-wrap: wrap;
+  }
+}
+.subscribe__left {
+  padding: 110px 60px 196px 0px;
+  border-right: 1px solid $grey-color-light;
+  @media screen and (max-width: $small-desktop-w) {
+    padding-right: 20px;
+  }
+  @media screen and (max-width: $port-tablets-w) {
+    padding: 110px 60px 0px 0px;
+    padding-right: 0;
+    width: 100%;
+    border: none;
+  }
+}
+.subscribe__right {
+  padding: 145px 0px 165px 0px;
+  @media screen and (max-width: $port-tablets-w) {
+    padding: 40px 0px 60px 0px;
+    margin: 0px auto;
+    width: 100%;
+  }
+}
+
+.subscribe__form {
+  text-align: center;
+  margin: 0px auto;
+  @media screen and (max-width: $big-mobile-w) {
+    display: none;
+  }
+}
+.subscribe-form__title {
+  font-size: rem(24);
+  text-transform: uppercase;
+  color: $dark-color;
+  font-family: $main-font;
+  margin-bottom: 10px;
+}
+.subscribe-form__subtitle {
+  display: block;
+  text-transform: uppercase;
+  font-size: rem(14);
+  color: $dark-color;
+  font-family: $main-font;
+  margin-bottom: 35px;
+}
+.subscribe-form__input {
+  border: none;
+  display: block;
+  width: 385px;
+  background-color: #e1e1e1;
+  padding: 20px 115px 20px 25px;
+  box-sizing: border-box;
+  &:focus {
+    outline: none;
+  }
+  @media screen and (max-width: $small-desktop-w) {
+    width: 285px;
+  }
+  @media screen and (max-width: $small-desktop-w) {
+    width: auto;
+    flex-grow: 1;
+  }
+}
+.subscribe-form__wrapper {
+  overflow: hidden;
+  border-radius: 35px;
+  position: relative;
+  display: inline-block;
+}
+.subscribe-form__button {
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  right: 0px;
+}

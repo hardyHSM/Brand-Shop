@@ -1,0 +1,23 @@
+.raiting {
+  width: 75px;
+  height: 15px;
+  background-image: url('../img/svg/raiting/star-templ.svg');
+  position: relative;
+}
+.raiting_small {
+  width: 60.5px;
+  height: 12px;
+}
+.raiting__count {
+  position: absolute;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-image: url('../img/svg/raiting/star.svg');
+}
+.raiting__count_4-5 {
+  width: 89.5%;
+}
+.raiting__count_5 {
+  width: 100%;
+}

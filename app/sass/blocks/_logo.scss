@@ -1,0 +1,23 @@
+.logo {
+  text-transform: uppercase;
+  font-size: rem(27);
+  display: block;
+}
+.logo__text {
+  vertical-align: middle;
+  display: inline-block;
+  line-height: 1;
+  color: $dark-color;
+  font-family: $main-font_light;
+}
+.logo__text-bold {
+  line-height: 1;
+  font-size: 1.8rem;
+  color: $accent-color;
+  font-family: $main-font_black;
+}
+.logo__picture {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
