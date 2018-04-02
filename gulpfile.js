@@ -198,8 +198,20 @@ gulp.task('libs', function () {
 });
 
 
+
+// ПЕРЕНОС НУЖНЫХ ФАЙЛОD
+
+gulp.task('copy', function () {
+	return 	gulp.src([config.app + "/.htaccess"])
+		.pipe(gulp.dest(config.build + '/'))
+		.pipe(browserSync.reload({stream: true}));
+});
+
+
+
+
 gulp.task("default", ["watch"]);
-gulp.task('build',['html','css','imgmin','js','libs','fonts','svg-sprite']);
+gulp.task('build',['html','css','imgmin','js','libs','fonts','svg-sprite','copy']);
 
 gulp.task('watch', ["server"], function(){
   gulp.watch(config.app + config.sass + '/**/*.scss', ['css']);
