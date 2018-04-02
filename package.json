@@ -38,6 +38,5 @@
     "gulp-util": "^3.0.8",
     "gulp.spritesmith": "^6.9.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }

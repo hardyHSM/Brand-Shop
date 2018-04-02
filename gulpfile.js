@@ -18,7 +18,10 @@
 		cheerio =           require("gulp-cheerio"),
 		replace = 			require("gulp-replace"),
 		gcmq = 				require('gulp-group-css-media-queries'),
-		sassGlob = 			require('gulp-sass-glob');
+		sassGlob = 			require('gulp-sass-glob'),
+		tinypng = 			require('gulp-tinypng-compress');
+ 
+
 		
 		
 var config = {
@@ -154,14 +157,15 @@ gulp.task('svgmin', function () {
 
 
 
-
-
 // MINIFY IMAGE
 	
 	
 gulp.task('imgmin', function () {
      return gulp.src([config.app + config.img +'/**/*.*', '!' + config.app + config.img + config.svg.src + config.svg.icon + '/**/*.svg'])
-        .pipe(imagemin())
+     	.pipe(tinypng({
+            key: 'BKypTBL4hPbASbRtvDPuTs9WDghjnXzo',
+            log: true
+        }))
         .pipe(gulp.dest(config.build + config.img +'/'))
 		.pipe(browserSync.reload({stream: true}));
 });
