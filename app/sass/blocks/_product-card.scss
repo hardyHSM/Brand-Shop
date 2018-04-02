@@ -119,16 +119,16 @@
 // МОДИФИКАТОРЫ PRODUCT CARD
 
 .product-card_move {
-  transition: all 0.3s;
+  transition: all 0.31s;
   & {
-    transition: all 0.3s;
+    transition: all 0.31s;
   }
 }
 
 
 
 .product-card_list {
-  width: 100%;
+  width: 100% !important;
   @include flex($jc: sb, $wrap: nowrap);
   .product-card__button {
     display: none;
@@ -137,6 +137,9 @@
     width: 260px;
     flex-shrink: 0;
     margin-right: 15px;
+    @media screen and (max-width: $small-desktop-w) {
+    	width: 200px;
+    }
   }
   .product-card__data {
     padding: 10px;
@@ -177,6 +180,9 @@
   }
   &:hover {
     box-shadow: none;
+  }
+  @media screen and (max-width: $small-desktop-w) {
+  	width: 100%;
   }
 }
 
